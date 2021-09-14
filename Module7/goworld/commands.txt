@@ -1,0 +1,52 @@
+mkdir proj
+cd ./proj
+New-Item -Name wiki.go 
+code wiki.go
+
+//запуск 
+go build wiki.go
+./wiki
+
+echo $env:GOPATH  
+
+[рассказать про Emmet и генерацию шаблона html] - поставить знак ! - Tab Tab
+
+Bootstrap
+1. Идем сюда - https://www.bootstrapcdn.com/
+2. Копируем CSS и встравляем после title в наш index.html
+3. Идем на https://getbootstrap.com/docs/5.0/examples/
+4. Копируем Body шаблона Corosel 
+5. Копируем Head теги
+6. копируем ссылку на Coroasel.css 
+7. копируем ссылку на javascript bundle 
+
+
+//PostgreSQL
+1. Установить сервер PostgreSQL (пароль - pgadmin/postG_4050.., port - 5432)
+2. Создаем базу данных goworldDB
+3. Создаем таблицы (SQL скрипты)
+4. Загрузить драйвер pgx 
+	(go mod init goworld)
+	(go get github.com/jackc/pgx/v4) 
+	(import - "github.com/jackc/pgx/v4""context")
+5. Подключаем gin - https://github.com/gin-gonic/gin
+    go get -u github.com/gin-gonic/gin | import "github.com/gin-gonic/gin"
+6. Добавляем рауты для Gin 
+7. Добавляем функции-хэндлеры
+
+git bash - установить
+curl 127.0.0.1:8080/v1/hotels/
+curl -d '{"country":"Russia", "destination":"Sochi", "hotel":"Les Art Resort"}' -H "Content-Type: application/json" -X POST localhost:8080/v1/hotels/
+	
+//теперь делаем  рефакторинг
+разносим по файлам в корневой директории
+используем go run . для запуска проекта
+делаем header и footer
+- делаем страничку hotels
+-- делаем вывод изображения 
+-- делаем возможность осуществить бронирование 
+
+//делаем страничку вывода отелей 
+-- делаем модальное окно
+
+Shift + Alt + F
